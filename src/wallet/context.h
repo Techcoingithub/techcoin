@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_WALLET_CONTEXT_H
-#define BITCOIN_WALLET_CONTEXT_H
+#ifndef TECHCOIN_WALLET_CONTEXT_H
+#define TECHCOIN_WALLET_CONTEXT_H
 
 #include <sync.h>
 
@@ -45,4 +45,4 @@ struct WalletContext {
     ~WalletContext();
 };
 
-#endif // BITCOIN_WALLET_CONTEXT_H
+#endif // TECHCOIN_WALLET_CONTEXT_H

@@ -10,7 +10,7 @@
 #include <util/tokenpipe.h>
 #include <warnings.h>
 
-#include <config/bitcoin-config.h>
+#include <config/techcoin-config.h>
 
 #include <assert.h>
 #include <atomic>

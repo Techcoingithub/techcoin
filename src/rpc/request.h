@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_RPC_REQUEST_H
-#define BITCOIN_RPC_REQUEST_H
+#ifndef TECHCOIN_RPC_REQUEST_H
+#define TECHCOIN_RPC_REQUEST_H
 
 #include <any>
 #include <string>
@@ -40,4 +40,4 @@ public:
     void parse(const UniValue& valRequest);
 };
 
-#endif // BITCOIN_RPC_REQUEST_H
+#endif // TECHCOIN_RPC_REQUEST_H

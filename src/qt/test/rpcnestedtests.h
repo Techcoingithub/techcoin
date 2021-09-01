@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_TEST_RPCNESTEDTESTS_H
-#define BITCOIN_QT_TEST_RPCNESTEDTESTS_H
+#ifndef TECHCOIN_QT_TEST_RPCNESTEDTESTS_H
+#define TECHCOIN_QT_TEST_RPCNESTEDTESTS_H
 
 #include <QObject>
 #include <QTest>
@@ -24,4 +24,4 @@ public:
     void rpcNestedTests();
 };
 
-#endif // BITCOIN_QT_TEST_RPCNESTEDTESTS_H
+#endif // TECHCOIN_QT_TEST_RPCNESTEDTESTS_H

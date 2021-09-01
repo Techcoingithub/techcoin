@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_ADDRDB_H
-#define BITCOIN_ADDRDB_H
+#ifndef TECHCOIN_ADDRDB_H
+#define TECHCOIN_ADDRDB_H
 
 #include <fs.h>
 #include <net_types.h> // For banmap_t
@@ -116,4 +116,4 @@ void DumpAnchors(const fs::path& anchors_db_path, const std::vector<CAddress>& a
  */
 std::vector<CAddress> ReadAnchors(const fs::path& anchors_db_path);
 
-#endif // BITCOIN_ADDRDB_H
+#endif // TECHCOIN_ADDRDB_H

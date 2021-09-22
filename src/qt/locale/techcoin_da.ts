@@ -2516,7 +2516,7 @@ Note: Siden gebyret er kalkuleret på en per-byte basis, et gebyr på "100 satos
     </message>
     <message>
         <source>A message that was attached to the techcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Techcoin network.</source>
-        <translation>En besked, som blev føjet til “bitcon:”-URI'en, som vil gemmes med transaktionen til din reference. Bemærk: Denne besked vil ikke blive sendt over Techcoin-netværket.</translation>
+        <translation>En besked, som blev føjet til “techoin:”-URI'en, som vil gemmes med transaktionen til din reference. Bemærk: Denne besked vil ikke blive sendt over Techcoin-netværket.</translation>
     </message>
     <message>
         <source>Pay To:</source>

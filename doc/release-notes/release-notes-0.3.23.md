@@ -1,7 +1,7 @@
-Win32, Linux, MacOSX and source releases for techcoin v0.3.23 have been uploaded to
-https://sourceforge.net/projects/techcoin/files/Techcoin/techcoin-0.3.23/
+Win32, Linux, MacOSX and source releases for bitcoin v0.3.23 have been uploaded to
+https://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.3.23/
 
-This is another quick bugfix release, trying to deal with the influx of new techcoin users.
+This is another quick bugfix release, trying to deal with the influx of new bitcoin users.
 
 Main items of note:
 

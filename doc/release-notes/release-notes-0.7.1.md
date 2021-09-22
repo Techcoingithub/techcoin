@@ -1,23 +1,23 @@
-Techcoin version 0.7.1 is now available from:
-  http://sourceforge.net/projects/techcoin/files/Techcoin/techcoin-0.7.1/
+Bitcoin version 0.7.1 is now available from:
+  http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.7.1/
 
 This is a bug-fix minor release.
 
 Please report bugs using the issue tracker at github:
-  https://github.com/techcoin/techcoin/issues
+  https://github.com/bitcoin/bitcoin/issues
 
 Project source code is hosted at github; you can get
 source-only tarballs/zipballs directly from there:
-  https://github.com/techcoin/techcoin/tarball/v0.7.1  # .tar.gz
-  https://github.com/techcoin/techcoin/zipball/v0.7.1  # .zip
+  https://github.com/bitcoin/bitcoin/tarball/v0.7.1  # .tar.gz
+  https://github.com/bitcoin/bitcoin/zipball/v0.7.1  # .zip
 
 Ubuntu Linux users can use the "Personal Package Archive" (PPA)
 maintained by Matt Corallo to automatically keep 
 up-to-date.  Just type:
-  sudo apt-add-repository ppa:techcoin/techcoin
+  sudo apt-add-repository ppa:bitcoin/bitcoin
   sudo apt-get update
-in your terminal, then install the techcoin-qt package:
-  sudo apt-get install techcoin-qt
+in your terminal, then install the bitcoin-qt package:
+  sudo apt-get install bitcoin-qt
 
 KNOWN ISSUES
 ------------
@@ -30,7 +30,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
-/Applications/Techcoin-Qt (on Mac) or techcoind/techcoin-qt (on Linux).
+/Applications/Bitcoin-Qt (on Mac) or bitcoind/bitcoin-qt (on Linux).
 
 If you were running on Linux with a version that might have been compiled
 with a different version of Berkeley DB (for example, if you were using an
@@ -75,9 +75,9 @@ Dependency changes
 Bug fixes
 ---------
 
-* Clicking on a techcoin: URI on Windows should now launch Techcoin-Qt properly.
+* Clicking on a bitcoin: URI on Windows should now launch Bitcoin-Qt properly.
 
-* When running -testnet, use RPC port 18332 by default.
+* When running -testnet, use RPC port 18862 by default.
 
 * Better detection and handling of corrupt wallet.dat and blkindex.dat files.
   Previous versions would crash with a DB_RUNRECOVERY exception, this

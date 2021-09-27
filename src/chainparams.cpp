@@ -37,6 +37,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
     return genesis;
 }
 
+
 /**
  * Build the genesis block. Note that the output of its generation
  * transaction cannot be spent since it did not originally exist in the
@@ -54,6 +55,7 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
     const CScript genesisOutputScript = CScript() << ParseHex("04c04ee91cba8db0181e6efa9d200cee7aac169eef79524703d996bfde6099094e0a74b5f92e349ef82977570db15f22fffafddbfcf8195139cbc606207ac3869e") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
+
 
 /**
  * Main network on which people trade goods and services.
@@ -91,7 +93,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeout = 1628640000; // August 11th, 2021
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].min_activation_height = 709632; // Approximately November 12th, 2021
 
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000001fa4663bbbe19f82de910280");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000001");
         consensus.defaultAssumeValid = uint256S("0x00000000000000000008a89e854d57e5667df88f1cdef6fde2fbca1de5b639ad"); // 691719
 
         /**
@@ -108,25 +110,11 @@ public:
         m_assumed_blockchain_size = 420;
         m_assumed_chain_state_size = 6;
 
-        genesis = CreateGenesisBlock(1632509930, 2083236893, 0x1d00ffff, 1, 50 * COIN);
-
-        hashGenesisBlock = uint256("0x01")
-        if (true && genesis.GetHash() != hashGenesisBlock)
-                {
-                    Logprintf("recalculating params for mainnet.\n");
-                    Logprintf("old mainnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-                    Logprintf("old mainnet genesis hash:  %s\n", hashGenesisBlock.ToString().c_str());
-                    // deliberately empty for loop finds nonce value.
-                    for(genesis.nNonce == 0; genesis.GetHash() > bnProofOfWorkLimit; genesis.nNonce++){ }
-                    Logprintf("new mainnet genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-                    Logprintf("new mainnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-                    Logprintf("new mainnet genesis hash: %s\n", genesis.GetHash().ToString().c_str());
-                }
-
+        genesis = CreateGenesisBlock(1632531011, 814729862, 0x1d00ffff, 1, 50 * COIN);
 
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"));
-        assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000000324ede63db3fed1baf4c66aac921d3f760ece8c111e9b597ccf34b0a"));
+        assert(genesis.hashMerkleRoot == uint256S("0x6d272b54ea875eb211c571ac56f684b81ec16dda41d80330181c3116c3f168e4"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
@@ -153,7 +141,7 @@ public:
 
         checkpointData = {
             {
-                { 0, uint256S("0x0000000069e244f73d78e8fd29ba2fd2ed618bd6fa2ee92559f542fdb26e7c1d")},
+                { 0, uint256S("00000000324ede63db3fed1baf4c66aac921d3f760ece8c111e9b597ccf34b0a")},
                     }
         };
 
@@ -206,7 +194,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeout = 1628640000; // August 11th, 2021
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].min_activation_height = 0; // No activation delay
 
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000005180c3bd8290da33a1a");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000001");
         consensus.defaultAssumeValid = uint256S("0x0000000000004ae2f3896ca8ecd41c460a35bf6184e145d91558cece1c688a76"); // 2010000
 
         pchMessageStart[0] = 0x23;
@@ -218,24 +206,11 @@ public:
         m_assumed_blockchain_size = 40;
         m_assumed_chain_state_size = 2;
 
-        genesis = CreateGenesisBlock(1632509930, 414098458, 0x1d00ffff, 1, 50 * COIN);
-
-        hashGenesisBlock = uint256("0x01")
-        if (true && genesis.GetHash() != hashGenesisBlock)
-                {
-                    Logprintf("recalculating params for testnet.\n");
-                    Logprintf("old testnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-                    Logprintf("old testnet genesis hash:  %s\n", hashGenesisBlock.ToString().c_str());
-                    // deliberately empty for loop finds nonce value.
-                    for(genesis.nNonce == 0; genesis.GetHash() > bnProofOfWorkLimit; genesis.nNonce++){ }
-                    Logprintf("new testnet genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-                    Logprintf("new testnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-                    Logprintf("new testnet genesis hash: %s\n", genesis.GetHash().ToString().c_str());
-                }
+        genesis = CreateGenesisBlock(1632531011, 814729862, 0x1d00ffff, 1, 50 * COIN);
 
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000000000933ea01ad0ee984209779baaec3ced90fa3f408719526f8d77f4943"));
-        assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000000324ede63db3fed1baf4c66aac921d3f760ece8c111e9b597ccf34b0a"));
+        assert(genesis.hashMerkleRoot == uint256S("0x6d272b54ea875eb211c571ac56f684b81ec16dda41d80330181c3116c3f168e4"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -259,7 +234,7 @@ public:
 
         checkpointData = {
             {
-                {0, uint256S("000000002a936ca763904c3c35fce2f3556c559c0214345d31b1bcebf76acb70")},
+                {0, uint256S("00000000324ede63db3fed1baf4c66aac921d3f760ece8c111e9b597ccf34b0a")},
             }
         };
 
@@ -291,7 +266,7 @@ public:
             vSeeds.emplace_back("2a01:7c8:d005:390::5");
             vSeeds.emplace_back("v7ajjeirttkbnt32wpy3c6w3emwnfr3fkla7hpxcfokr3ysd3kqtzmqd.onion:38863");
 
-            consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000008546553c03");
+            consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000001");
             consensus.defaultAssumeValid = uint256S("0x000000187d4440e5bff91488b700a140441e089a8aaea707414982460edbfe54"); // 47200
             m_assumed_blockchain_size = 1;
             m_assumed_chain_state_size = 0;
@@ -363,10 +338,11 @@ public:
         nDefaultPort = 38863;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1598918400, 52613770, 0x1e0377ae, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1632531010, 1382237, 0x1e0377ae, 1, 50 * COIN);
+
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000008819873e925422c1ff0f99f7cc9bbb232af63a077a480a3633bee1ef6"));
-        assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000014fb196039a593c8982528304983c25fc2e9a1892f08eaca3a867e8125c"));
+        assert(genesis.hashMerkleRoot == uint256S("0x6d272b54ea875eb211c571ac56f684b81ec16dda41d80330181c3116c3f168e4"));
 
         vFixedSeeds.clear();
 
@@ -436,25 +412,11 @@ public:
 
         UpdateActivationParametersFromArgs(args);
 
-        genesis = CreateGenesisBlock(1296688602, 2, 0x207fffff, 1, 50 * COIN);
-
-        hashGenesisBlock = uint256("0x01")
-        if (true && genesis.GetHash() != hashGenesisBlock)
-                {
-                    Logprintf("recalculating params for regnet.\n");
-                    Logprintf("old regnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-                    Logprintf("old regnet genesis hash:  %s\n", hashGenesisBlock.ToString().c_str());
-                    // deliberately empty for loop finds nonce value.
-                    for(genesis.nNonce == 0; genesis.GetHash() > bnProofOfWorkLimit; genesis.nNonce++){ }
-                    Logprintf("new regnet genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-                    Logprintf("new regnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-                    Logprintf("new regnet genesis hash: %s\n", genesis.GetHash().ToString().c_str());
-                }
-
+        genesis = CreateGenesisBlock(1632531010, 0, 0x207fffff, 1, 50 * COIN);
 
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206"));
-        assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
+        assert(consensus.hashGenesisBlock == uint256S("0x63b08043ab6fddd2535409cfb9da47805e9c42f3f8cb3aa1aaef6619dc683b20"));
+        assert(genesis.hashMerkleRoot == uint256S("0x6d272b54ea875eb211c571ac56f684b81ec16dda41d80330181c3116c3f168e4"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();
@@ -467,7 +429,7 @@ public:
 
         checkpointData = {
             {
-                {0, uint256S("0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206")},
+                {0, uint256S("00000000cfa0a78eac266ebabe2c1f53d3a829ef4a801df3cbd4e12adcd75a33")},
             }
         };
 

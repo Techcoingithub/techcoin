@@ -1,4 +1,4 @@
 # List of fixed seed nodes for testnet
+164.90.142.102:18863
 
 # Onion nodes
-35k2va6vyw4oo5ly2quvcszgdqr56kcnfgcqpnpcffut4jn3mhhwgbid.onion:18863

@@ -1,0 +1,33 @@
+# /etc/conf.d/techcoind: config file for /etc/init.d/techcoind
+
+# Config file location
+#TECHCOIND_CONFIGFILE="/etc/techcoin/techcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $TECHCOIND_USER)
+#TECHCOIND_PIDDIR="/var/run/techcoind"
+
+# What filename to give the pidfile
+#TECHCOIND_PIDFILE="${TECHCOIND_PIDDIR}/techcoind.pid"
+
+# Where to write techcoind data (be mindful that the blockchain is large)
+#TECHCOIND_DATADIR="/var/lib/techcoind"
+
+# User and group to own techcoind process
+#TECHCOIND_USER="techcoin"
+#TECHCOIND_GROUP="techcoin"
+
+# Path to techcoind executable
+#TECHCOIND_BIN="/usr/bin/techcoind"
+
+# Nice value to run techcoind under
+#TECHCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#TECHCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for techcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+TECHCOIND_SIGTERM_TIMEOUT=600

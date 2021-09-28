@@ -9,13 +9,13 @@ from test_framework.messages import (
     COIN,
     tx_from_hex,
 )
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import TechcoinTestFramework
 from test_framework.util import (
     assert_array_result,
     assert_equal,
 )
 
-class ListTransactionsTest(BitcoinTestFramework):
+class ListTransactionsTest(TechcoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
 

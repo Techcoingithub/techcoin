@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_NODE_BLOCKSTORAGE_H
-#define BITCOIN_NODE_BLOCKSTORAGE_H
+#ifndef TECHCOIN_NODE_BLOCKSTORAGE_H
+#define TECHCOIN_NODE_BLOCKSTORAGE_H
 
 #include <fs.h>
 #include <protocol.h> // For CMessageHeader::MessageStartChars
@@ -79,4 +79,4 @@ FlatFilePos SaveBlockToDisk(const CBlock& block, int nHeight, CChain& active_cha
 
 void ThreadImport(ChainstateManager& chainman, std::vector<fs::path> vImportFiles, const ArgsManager& args);
 
-#endif // BITCOIN_NODE_BLOCKSTORAGE_H
+#endif // TECHCOIN_NODE_BLOCKSTORAGE_H

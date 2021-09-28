@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_WALLET_SPEND_H
-#define BITCOIN_WALLET_SPEND_H
+#ifndef TECHCOIN_WALLET_SPEND_H
+#define TECHCOIN_WALLET_SPEND_H
 
 #include <wallet/coinselection.h>
 #include <wallet/transaction.h>
@@ -61,4 +61,4 @@ public:
     }
 };
 
-#endif // BITCOIN_WALLET_SPEND_H
+#endif // TECHCOIN_WALLET_SPEND_H

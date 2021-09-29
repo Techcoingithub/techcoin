@@ -1259,14 +1259,14 @@ bool CChainState::IsInitialBlockDownload() const
     LOCK(cs_main);
     if (m_cached_finished_ibd.load(std::memory_order_relaxed))
         return false;
-    if (fImporting || fReindex)
-        return true;
-    if (m_chain.Tip() == nullptr)
-        return true;
-    if (m_chain.Tip()->nChainWork < nMinimumChainWork)
-        return true;
-    if (m_chain.Tip()->GetBlockTime() < (GetTime() - nMaxTipAge))
-        return true;
+  //  if (fImporting || fReindex)
+  //      return true;
+  //  if (m_chain.Tip() == nullptr)
+  //      return true;
+//    if (m_chain.Tip()->nChainWork < nMinimumChainWork)
+//        return true;
+//    if (m_chain.Tip()->GetBlockTime() < (GetTime() - nMaxTipAge))
+//        return true;
     LogPrintf("Leaving InitialBlockDownload (latching to false)\n");
     m_cached_finished_ibd.store(true, std::memory_order_relaxed);
     return false;

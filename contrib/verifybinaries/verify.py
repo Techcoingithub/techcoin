@@ -5,7 +5,7 @@
 """Script for verifying Bitoin Core release binaries
 
 This script attempts to download the signature file SHA256SUMS.asc from
-techcoincore.org and techcoin.org and compares them.
+techcoin.info and techcoin.org and compares them.
 It first checks if the signature passes, and then downloads the files
 specified in the file, and checks if the hashes of these files match those
 that are specified in the signature file.
@@ -21,7 +21,7 @@ from textwrap import indent
 
 WORKINGDIR = "/tmp/techcoin_verify_binaries"
 HASHFILE = "hashes.tmp"
-HOST1 = "https://techcoincore.org"
+HOST1 = "https://techcoin.info"
 HOST2 = "https://techcoin.org"
 VERSIONPREFIX = "techcoin-core-"
 SIGNATUREFILENAME = "SHA256SUMS.asc"
@@ -113,7 +113,7 @@ def main(args):
     success, output = download_with_wget(HOST2 + remote_sigfile, sigfile2)
     if not success:
         print("techcoin.org failed to provide signature file, "
-              "but techcoincore.org did?")
+              "but techcoin.info did?")
         print("wget output:")
         print(indent(output, '\t'))
         remove_files([sigfile1])
@@ -121,7 +121,7 @@ def main(args):
 
     # ensure that both signature files are equal
     if not files_are_equal(sigfile1, sigfile2):
-        print("techcoin.org and techcoincore.org signature files were not equal?")
+        print("techcoin.org and techcoin.info signature files were not equal?")
         print(f"See files {WORKINGDIR}/{sigfile1} and {WORKINGDIR}/{sigfile2}")
         return 6
 

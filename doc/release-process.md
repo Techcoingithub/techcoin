@@ -206,7 +206,7 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 ```
 
 
-- Upload to the techcoincore.org server (`/var/www/bin/techcoin-core-${VERSION}/`):
+- Upload to the techcoin.info server (`/var/www/bin/techcoin-core-${VERSION}/`):
     1. The contents of each `./techcoin/guix-build-${VERSION}/output/${HOST}/` directory, except for
        `*-debug*` files.
 
@@ -219,11 +219,11 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
        for troubleshooting by developers. It is assumed that anyone that is
        interested in debugging can run guix to generate the files for
        themselves. To avoid end-user confusion about which file to pick, as well
-       as save storage space *do not upload these to the techcoincore.org server,
+       as save storage space *do not upload these to the techcoin.info server,
        nor put them in the torrent*.
 
        ```sh
-       find guix-build-${VERSION}/output/ -maxdepth 2 -type f -not -name "SHA256SUMS.part" -and -not -name "*debug*" -exec scp {} user@techcoincore.org:/var/www/bin/techcoin-core-${VERSION} \;
+       find guix-build-${VERSION}/output/ -maxdepth 2 -type f -not -name "SHA256SUMS.part" -and -not -name "*debug*" -exec scp {} user@techcoin.info:/var/www/bin/techcoin-core-${VERSION} \;
        ```
 
     2. The `SHA256SUMS` file
@@ -242,18 +242,18 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
   ```
 
   Insert the magnet URI into the announcement sent to mailing lists. This permits
-  people without access to `techcoincore.org` to download the binary distribution.
+  people without access to `techcoin.info` to download the binary distribution.
   Also put it into the `optional_magnetlink:` slot in the YAML file for
-  techcoincore.org.
+  techcoin.info.
 
 - Update other repositories and websites for new version
 
-  - techcoincore.org blog post
+  - techcoin.info blog post
 
-  - techcoincore.org maintained versions update:
-    [table](https://github.com/techcoin-core/techcoincore.org/commits/master/_includes/posts/maintenance-table.md)
+  - techcoin.info maintained versions update:
+    [table](https://github.com/techcoin-core/techcoin.info/commits/master/_includes/posts/maintenance-table.md)
 
-  - techcoincore.org RPC documentation update
+  - techcoin.info RPC documentation update
 
       - Install [golang](https://golang.org/doc/install)
 
@@ -261,7 +261,7 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 
       - Run techcoind on regtest
 
-      - Clone the [techcoincore.org repository](https://github.com/techcoin-core/techcoincore.org)
+      - Clone the [techcoin.info repository](https://github.com/techcoin-core/techcoin.info)
 
       - Run: `go run generate.go` while being in `contrib/doc-gen` folder, and with techcoin-cli in PATH
 
@@ -302,7 +302,7 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 
   - techcoin-dev and techcoin-core-dev mailing list
 
-  - Techcoin Core announcements list https://techcoincore.org/en/list/announcements/join/
+  - Techcoin Core announcements list https://techcoin.info/en/list/announcements/join/
 
   - Techcoin Core Twitter https://twitter.com/techcoincoreorg
 

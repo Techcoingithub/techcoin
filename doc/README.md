@@ -5,7 +5,7 @@ Setup
 ---------------------
 Techcoin Core is the original Techcoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Techcoin transactions, which requires a few hundred gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Techcoin Core, visit [techcoincore.org](https://techcoincore.org/en/download/).
+To download Techcoin Core, visit [techcoin.info](https://techcoin.info/en/download/).
 
 Running
 ---------------------
@@ -56,7 +56,7 @@ The Techcoin repo's [root README](/README.md) contains relevant information on t
 - [Productivity Notes](productivity.md)
 - [Release Notes](release-notes.md)
 - [Release Process](release-process.md)
-- [Source Code Documentation (External Link)](https://doxygen.techcoincore.org/)
+- [Source Code Documentation (External Link)](https://doxygen.techcoin.info/)
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [JSON-RPC Interface](JSON-RPC-interface.md)

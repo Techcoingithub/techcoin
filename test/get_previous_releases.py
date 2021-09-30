@@ -86,7 +86,7 @@ def download_binary(tag, args) -> int:
             match.group(1), match.group(2))
     tarball = 'techcoin-{tag}-{platform}.tar.gz'.format(
         tag=tag[1:], platform=args.platform)
-    tarballUrl = 'https://techcoincore.org/{bin_path}/{tarball}'.format(
+    tarballUrl = 'https://techcoin.info/{bin_path}/{tarball}'.format(
         bin_path=bin_path, tarball=tarball)
 
     print('Fetching: {tarballUrl}'.format(tarballUrl=tarballUrl))

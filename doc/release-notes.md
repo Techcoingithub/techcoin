@@ -19,7 +19,7 @@ https://github.com/techcoin-core/techcoin-devwiki/wiki/
 
 Techcoin Core version *version* is now available from:
 
-  <https://techcoincore.org/bin/techcoin-core-*version*/>
+  <https://techcoin.info/bin/techcoin-core-*version*/>
 
 This release includes new features, various bug fixes and performance
 improvements, as well as updated translations.
@@ -30,7 +30,7 @@ Please report bugs using the issue tracker at GitHub:
 
 To receive security and update notifications, please subscribe to:
 
-  <https://techcoincore.org/en/list/announcements/join/>
+  <https://techcoin.info/en/list/announcements/join/>
 
 How to Upgrade
 ==============

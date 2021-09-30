@@ -3,11 +3,11 @@
 ## Supported Versions
 
 See our website for versions of Techcoin Core that are currently supported with
-security updates: https://techcoincore.org/en/lifecycle/#schedule
+security updates: https://techcoin.info/en/lifecycle/#schedule
 
 ## Reporting a Vulnerability
 
-To report security issues send an email to security@techcoincore.org (not for support).
+To report security issues send an email to security@techcoin.info (not for support).
 
 The following keys may be used to communicate sensitive information to developers:
 

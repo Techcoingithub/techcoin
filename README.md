@@ -1,10 +1,10 @@
 Techcoin Core integration/staging tree
 =====================================
 
-https://techcoincore.org
+https://techcoin.info
 
 For an immediately usable, binary version of the Techcoin Core software, see
-https://techcoincore.org/en/download/.
+https://techcoin.info/en/download/.
 
 Further information about Techcoin Core is available in the [doc folder](/doc).
 

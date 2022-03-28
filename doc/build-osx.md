@@ -92,7 +92,7 @@ Now that all the required dependencies are installed, let's clone the Techcoin C
 All build scripts and commands will run from this directory.
 
 ``` bash
-git clone https://github.com/techcoin/techcoin.git
+git clone https://github.com/Techcoingithub/techcoin.git
 ```
 
 ### 5. Install Optional Dependencies

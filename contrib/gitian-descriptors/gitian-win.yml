@@ -24,7 +24,7 @@ packages:
 - "python3"
 - "python3-pip"
 remotes:
-- "url": "https://github.com/techcoin/techcoin.git"
+- "url": "https://github.com/Techcoingithub/techcoin.git"
   "dir": "techcoin"
 files: []
 script: |

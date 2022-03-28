@@ -46,7 +46,7 @@ pkg install autoconf automake boost-libs git gmake libevent libtool pkgconf
 ### 2. Clone Techcoin Repo
 Now that `git` and all the required dependencies are installed, let's clone the Techcoin Core repository to a directory. All build scripts and commands will run from this directory.
 ``` bash
-git clone https://github.com/techcoin/techcoin.git
+git clone https://github.com/Techcoingithub/techcoin.git
 ```
 
 ### 3. Install Optional Dependencies

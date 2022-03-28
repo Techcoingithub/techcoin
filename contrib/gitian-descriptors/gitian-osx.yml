@@ -29,7 +29,7 @@ packages:
 - "xorriso"
 - "libtinfo5"
 remotes:
-- "url": "https://github.com/techcoin/techcoin.git"
+- "url": "https://github.com/Techcoingithub/techcoin.git"
   "dir": "techcoin"
 files:
 - "Xcode-12.1-12A7403-extracted-SDK-with-libcxx-headers.tar.gz"

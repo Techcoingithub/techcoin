@@ -72,7 +72,7 @@ If you want to build the windows installer with `make deploy` you need [NSIS](ht
 
 Acquire the source in the usual way:
 
-    git clone https://github.com/techcoin/techcoin.git
+    git clone https://github.com/Techcoingithub/techcoin.git
     cd techcoin
 
 ## Building for 64-bit Windows

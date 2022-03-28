@@ -22,7 +22,7 @@ libtool
 pkg-config
 python37
 
-git clone https://github.com/techcoin/techcoin.git
+git clone https://github.com/Techcoingithub/techcoin.git
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.

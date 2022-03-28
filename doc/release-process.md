@@ -76,7 +76,7 @@ Check out the source code in the following directory hierarchy.
     cd /path/to/your/toplevel/build
     git clone https://github.com/techcoin-core/guix.sigs.git
     git clone https://github.com/techcoin-core/techcoin-detached-sigs.git
-    git clone https://github.com/techcoin/techcoin.git
+    git clone https://github.com/Techcoingithub/techcoin.git
 
 ### Write the release notes
 
